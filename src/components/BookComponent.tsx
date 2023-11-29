@@ -146,7 +146,7 @@ const BookComponent: FC<IProps> = ({ book, isFull, size: sizes, server_url }) =>
           }
         >
           {/* Компонент HTMLFlipBook */}
-          <div style={{height: '50px'}}>
+          <div style={{height: '0px'}}>
           
           </div>
 <HTMLFlipBook
@@ -165,7 +165,14 @@ const BookComponent: FC<IProps> = ({ book, isFull, size: sizes, server_url }) =>
   drawShadow={false}
   startPage={1}
   className="default"
-  style={{ margin: '0 auto', marginTop: `calc(50vh - ${size.height / 2.28}px)` }}
+  style={{
+    margin: 'auto', // Центрируем по горизонтали
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '110vh', // Заполняем всю высоту экрана
+  }}
   usePortrait={true}
   startZIndex={0}
   flippingTime={1000}
@@ -179,16 +186,17 @@ const BookComponent: FC<IProps> = ({ book, isFull, size: sizes, server_url }) =>
 >
   {/* Маппинг страниц */}
   {pages?.map((page: number) => (
-    <div className="demoPage" key={page} style={{ marginTop: '10px' }}>
-      {/* Компонент страницы */}
-      <Page
-        pageNumber={page}
-        width={size.width}
-        height={size.height}
-        onLoadError={(error) => console.error('Page load error:', error)}
-      />
-    </div>
-  ))}
+  <div className="demoPage" key={page} style={{ marginTop: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+    {/* Компонент страницы */}
+    <Page
+      pageNumber={page}
+      width={size.width}
+      height={size.height}
+      onLoadError={(error) => console.error('Page load error:', error)}
+    />
+  </div>
+))}
+
 </HTMLFlipBook>
 
         </Document>
