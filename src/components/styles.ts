@@ -78,8 +78,9 @@ export const BookWrapper = styled.div`
   position: relative;
   transition: all 0.3s ease;
   width: 100%; // Добавьте этот стиль
-  min-height: 400px;
-  height: auto;
+  min-height: 600px;
+  max-height: 750px;
+
 
 
 
