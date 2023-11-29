@@ -146,7 +146,7 @@ const BookComponent: FC<IProps> = ({ book, isFull, size: sizes, server_url }) =>
           }
         >
           {/* Компонент HTMLFlipBook */}
-          <div style={{height: '0px'}}>
+          <div style={{height: '50px'}}>
           
           </div>
 <HTMLFlipBook
@@ -165,7 +165,7 @@ const BookComponent: FC<IProps> = ({ book, isFull, size: sizes, server_url }) =>
   drawShadow={false}
   startPage={1}
   className="default"
-  style={{ margin: '0 auto', marginTop: `calc(55vh - ${size.height / 2.28}px)` }}
+  style={{ margin: '0 auto', marginTop: `calc(50vh - ${size.height / 2.28}px)` }}
   usePortrait={true}
   startZIndex={0}
   flippingTime={1000}

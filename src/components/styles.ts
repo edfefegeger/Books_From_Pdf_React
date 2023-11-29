@@ -76,10 +76,11 @@ export const Header = styled.header<HeaderProps>`
 
 export const BookWrapper = styled.div`
   position: relative;
-  transition: all 0.3s ease;
+
   width: 100%; // Добавьте этот стиль
   min-height: 600px;
-  max-height: 750px;
+  max-height: 950px;
+  height: auto;
 
 
 
